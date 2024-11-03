@@ -11,7 +11,7 @@ public class ExchangeRateApi {
     private final String API_KEY = "38d7ffbb1c2b817fb59758b3";
     private final String url = "https://v6.exchangerate-api.com/v6/";
 
-    public PairDto pair(String origen, String destino) {
+    public double getTasa(String origen, String destino) {
         String direccion = url + API_KEY + "/pair/" + origen + "/" + destino;
         Gson gson = new GsonBuilder()
             .create();
@@ -26,12 +26,12 @@ public class ExchangeRateApi {
                 .send(request, HttpResponse.BodyHandlers.ofString());
 
             String json = response.body();
-            PairDto pair = gson.fromJson(json, PairDto.class);
+            TasaDto tasaDto = gson.fromJson(json, TasaDto.class);
 
-            return pair;
+            return tasaDto.conversion_rate();
         } catch (Exception e) {
             System.out.println(e.getMessage());
-            return null;
+            return 0;
         }
     }
 }

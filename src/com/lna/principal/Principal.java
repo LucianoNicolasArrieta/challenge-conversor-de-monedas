@@ -14,59 +14,46 @@ public class Principal {
         while (running){
             Menu.printMenu();
             opcion = scanner.nextLine().trim();
-            Conversion conversion = new Conversion();
-
+            Conversion conversion;
             switch (opcion){
                 case "1":
-                    conversion.setMonedaOrigen("USD");
-                    conversion.setMonedaDestino("ARS");
+                    conversion = new Conversion("USD", "ARS");
                     conversion.setValor();
-                    conversion.convertir();
                     System.out.println(conversion);
                     System.out.println("\nPresione Enter para continuar: ");
                     scanner.nextLine();
                     break;
                 case "2":
-                    conversion.setMonedaOrigen("ARS");
-                    conversion.setMonedaDestino("USD");
+                    conversion = new Conversion("ARS", "USD");
                     conversion.setValor();
-                    conversion.convertir();
                     System.out.println(conversion);
                     System.out.println("\nPresione Enter para continuar: ");
                     scanner.nextLine();
                     break;
                 case "3":
-                    conversion.setMonedaOrigen("USD");
-                    conversion.setMonedaDestino("BRL");
+                    conversion = new Conversion("USD", "BRL");
                     conversion.setValor();
-                    conversion.convertir();
                     System.out.println(conversion);
                     System.out.println("\nPresione Enter para continuar: ");
                     scanner.nextLine();
                     break;
                 case "4":
-                    conversion.setMonedaOrigen("BRL");
-                    conversion.setMonedaDestino("USD");
+                    conversion = new Conversion("BRL", "USD");
                     conversion.setValor();
-                    conversion.convertir();
                     System.out.println(conversion);
                     System.out.println("\nPresione Enter para continuar: ");
                     scanner.nextLine();
                     break;
                 case "5":
-                    conversion.setMonedaOrigen("USD");
-                    conversion.setMonedaDestino("COP");
+                    conversion = new Conversion("USD", "COP");
                     conversion.setValor();
-                    conversion.convertir();
                     System.out.println(conversion);
                     System.out.println("\nPresione Enter para continuar: ");
                     scanner.nextLine();
                     break;
                 case "6":
-                    conversion.setMonedaOrigen("COP");
-                    conversion.setMonedaDestino("USD");
+                    conversion = new Conversion("COP", "USD");
                     conversion.setValor();
-                    conversion.convertir();
                     System.out.println(conversion);
                     System.out.println("\nPresione Enter para continuar: ");
                     scanner.nextLine();
