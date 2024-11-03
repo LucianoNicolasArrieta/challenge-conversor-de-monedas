@@ -21,6 +21,10 @@ public class Conversion {
     public void setValor() {
         System.out.println("Ingrese la cantidad a convertir: ");
         Scanner scanner = new Scanner(System.in);
+        while (!scanner.hasNextDouble()) {
+            System.out.println("Ingrese una cantidad válida: ");
+            scanner = new Scanner(System.in);
+        }
         this.valor = scanner.nextDouble();
         this.valorConvertido = valor * tasa_conversion;
     }

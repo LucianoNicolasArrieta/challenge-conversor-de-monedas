@@ -20,42 +20,42 @@ public class Principal {
                     conversion = new Conversion("USD", "ARS");
                     conversion.setValor();
                     System.out.println(conversion);
-                    System.out.println("\nPresione Enter para continuar: ");
+                    System.out.println("\nPresione Enter para continuar...");
                     scanner.nextLine();
                     break;
                 case "2":
                     conversion = new Conversion("ARS", "USD");
                     conversion.setValor();
                     System.out.println(conversion);
-                    System.out.println("\nPresione Enter para continuar: ");
+                    System.out.println("\nPresione Enter para continuar...");
                     scanner.nextLine();
                     break;
                 case "3":
                     conversion = new Conversion("USD", "BRL");
                     conversion.setValor();
                     System.out.println(conversion);
-                    System.out.println("\nPresione Enter para continuar: ");
+                    System.out.println("\nPresione Enter para continuar...");
                     scanner.nextLine();
                     break;
                 case "4":
                     conversion = new Conversion("BRL", "USD");
                     conversion.setValor();
                     System.out.println(conversion);
-                    System.out.println("\nPresione Enter para continuar: ");
+                    System.out.println("\nPresione Enter para continuar...");
                     scanner.nextLine();
                     break;
                 case "5":
                     conversion = new Conversion("USD", "COP");
                     conversion.setValor();
                     System.out.println(conversion);
-                    System.out.println("\nPresione Enter para continuar: ");
+                    System.out.println("\nPresione Enter para continuar...");
                     scanner.nextLine();
                     break;
                 case "6":
                     conversion = new Conversion("COP", "USD");
                     conversion.setValor();
                     System.out.println(conversion);
-                    System.out.println("\nPresione Enter para continuar: ");
+                    System.out.println("\nPresione Enter para continuar...");
                     scanner.nextLine();
                     break;
                 case "7":
