@@ -15,16 +15,16 @@ public class Historial {
         if (conversiones.isEmpty()) {
             return "El historial está vacío. Todavía no se han realizado conversiones.";
         } else {
-            String string = "";
+            StringBuilder string = new StringBuilder("********************* HISTORIAL *********************\n");
             DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy kk:mm");
             for (Conversion conversion:conversiones) {
-                System.out.println(string + "\n" +
-                    conversion.getHoraConversion().format(formatter) + "  -  " +
-                    conversion.getValor() + conversion.getMonedaOrigen() +
-                    " --> " +
-                    conversion.getValorConvertido() + conversion.getMonedaDestino());
+                string.append("\n")
+                    .append(conversion.getHoraConversion().format(formatter)).append("  -  ")
+                    .append(conversion.getValor()).append(conversion.getMonedaOrigen())
+                    .append(" --> ")
+                    .append(conversion.getValorConvertido()).append(conversion.getMonedaDestino());
             }
-            return string;
+            return string.toString();
         }
     }
 }

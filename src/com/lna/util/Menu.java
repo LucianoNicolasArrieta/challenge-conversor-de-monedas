@@ -12,8 +12,10 @@ public class Menu {
             4. Real brasileño --> Dólar
             5. Dólar --> Peso colombiano
             6. Peso colombiano --> Dólar
-            7. Ver historial de conversiones
-            8. Salir
+            7. Dólar --> Euro
+            8. Euro --> Dólar
+            9. Ver historial de conversiones
+            0. Salir
             
             Elija una opción válida: 
             *************************************************************

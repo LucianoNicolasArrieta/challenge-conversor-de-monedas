@@ -7,9 +7,9 @@ import java.util.Scanner;
 public class Conversion {
     private String monedaOrigen;
     private String monedaDestino;
-    private double valor;
-    private double valorConvertido;
-    private double tasa_conversion;
+    private Double valor;
+    private Double valorConvertido;
+    private Double tasa_conversion;
     private LocalDateTime horaConversion;
 
     public Conversion(String monedaOrigen, String monedaDestino) {

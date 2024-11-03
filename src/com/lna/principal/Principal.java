@@ -3,8 +3,6 @@ package com.lna.principal;
 import com.lna.model.Conversion;
 import com.lna.model.Historial;
 import com.lna.util.Menu;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
 public class Principal {
@@ -70,11 +68,27 @@ public class Principal {
                     scanner.nextLine();
                     break;
                 case "7":
-                    System.out.println(historial);
+                    conversion = new Conversion("USD", "EUR");
+                    conversion.setValor();
+                    System.out.println(conversion);
+                    historial.agregarConversion(conversion);
                     System.out.println("\nPresione Enter para continuar...");
                     scanner.nextLine();
                     break;
                 case "8":
+                    conversion = new Conversion("EUR", "USD");
+                    conversion.setValor();
+                    System.out.println(conversion);
+                    historial.agregarConversion(conversion);
+                    System.out.println("\nPresione Enter para continuar...");
+                    scanner.nextLine();
+                    break;
+                case "9":
+                    System.out.println(historial);
+                    System.out.println("\nPresione Enter para continuar...");
+                    scanner.nextLine();
+                    break;
+                case "0":
                     running = false;
                     System.out.println("Hasta pronto!");
                     break;
