@@ -2,6 +2,8 @@ package com.lna.exchange;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
 import java.net.URI;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
@@ -26,11 +28,11 @@ public class ExchangeRateApi {
                 .send(request, HttpResponse.BodyHandlers.ofString());
 
             String json = response.body();
-            TasaDto tasaDto = gson.fromJson(json, TasaDto.class);
+            JsonObject jsonObject = JsonParser.parseString(json).getAsJsonObject();
 
-            return tasaDto.conversion_rate();
+            return jsonObject.get("conversion_rate").getAsDouble();
         } catch (Exception e) {
-            System.out.println(e.getMessage());
+            System.out.println("Error al obtener la tasa de conversion: " + e.getMessage());
             return 0;
         }
     }

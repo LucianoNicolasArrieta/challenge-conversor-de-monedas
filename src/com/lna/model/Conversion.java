@@ -1,7 +1,7 @@
 package com.lna.model;
 
 import com.lna.exchange.ExchangeRateApi;
-import com.lna.exchange.TasaDto;
+import java.time.LocalDateTime;
 import java.util.Scanner;
 
 public class Conversion {
@@ -10,12 +10,34 @@ public class Conversion {
     private double valor;
     private double valorConvertido;
     private double tasa_conversion;
+    private LocalDateTime horaConversion;
 
     public Conversion(String monedaOrigen, String monedaDestino) {
         this.monedaOrigen = monedaOrigen;
         this.monedaDestino = monedaDestino;
         ExchangeRateApi api = new ExchangeRateApi();
         this.tasa_conversion = api.getTasa(monedaOrigen, monedaDestino);
+        this.horaConversion = LocalDateTime.now();
+    }
+
+    public String getMonedaOrigen() {
+        return monedaOrigen;
+    }
+
+    public String getMonedaDestino() {
+        return monedaDestino;
+    }
+
+    public double getValor() {
+        return valor;
+    }
+
+    public double getValorConvertido() {
+        return valorConvertido;
+    }
+
+    public LocalDateTime getHoraConversion() {
+        return horaConversion;
     }
 
     public void setValor() {
